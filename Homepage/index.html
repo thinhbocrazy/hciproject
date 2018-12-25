@@ -29,20 +29,15 @@
     <!-- Navbar -->
     <div class="w3-bar w3-black">
       <a href="#" class="w3-bar-item w3-button w3-hide-small">Home</a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small">Explore</a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small">Articles</a>
+      <a href="#Explore" class="w3-bar-item w3-button w3-hide-small" onclick="myFunction()">Explore</a>
+      <a href="#Articles" class="w3-bar-item w3-button w3-hide-small" onclick="myFunction()">Articles</a>
       <a href="#" class="w3-bar-item w3-button w3-hide-small">About</a>
-      <div class="w3-right">
-        <input type="text" class="w3-bar-item w3-input" placeholder="Search.." />
-        <a href="#" class="w3-bar-item w3-button w3-green">Go</a>
-        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-left w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
-      </div>
     </div>
 
     <div id="navsmall" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium">
-      <a href="#" class="w3-bar-item w3-button">Link 1</a>
-      <a href="#" class="w3-bar-item w3-button">Link 1</a>
-      <a href="#" class="w3-bar-item w3-button">Link 2</a>
+      <a href="#" class="w3-bar-item w3-button">Home</a>
+      <a href="#Articles" class="w3-bar-item w3-button" onclick="myFunction()">Articles</a>
+      <a href="#" class="w3-bar-item w3-button" onclick="myFunction()">About</a>
       <a href="#" class="w3-bar-item w3-button">Link 3</a>
     </div>
   </div>
@@ -50,7 +45,7 @@
   <!-- Automatic Slideshow Images -->
   <header class="w3-display-container">
     <div class="mySlides w3-display-container w3-center">
-      <img src="images/handle-world.jpg"/>
+      <img src="images/handle-world.jpg" />
       <div class="center">
         <h3>Los Angeles</h3>
         <p><b>We had the best time playing at Venice Beach!</b></p>
@@ -64,7 +59,7 @@
       </div>
     </div>
     <div class="mySlides w3-display-container w3-center">
-      <img src="images/satisfied.jpg" style="object-position:50% 0%"  />
+      <img src="images/satisfied.jpg" style="object-position:50% 0%" />
       <div class="center">
         <h3>Chicago</h3>
         <p><b>Thank you, Chicago - A night we won't forget.</b></p>
@@ -79,51 +74,61 @@
     </div>
   </header>
   <!-- The Explorer Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="Explore">
+    <h1 style="color:white">Explore</h1>
+    <div class="w3-row-padding w3-section" style="display: inline">
+
+      <div class="w3-col" style="width:40px">
+        <a href="javascript:void(0)" class="w3-hover-blue">
+          <i class="fa fa-search w3-xlarge w3-text-white"></i>
+        </a>
+      </div>
+      <div class="w3-rest"><input type="text" class="w3-input" placeholder="Search ..." /></div>
+    </div>
+
     <div class="bubbleChart"></div>
   </div>
   <!-- Articles Section -->
-  <div class="w3-gray w3-container" id="Articles">
-    <h3 class="w3-border-bottom w3-border-black w3-padding-16">
-      Articles
-    </h3>
+  <div class="w3-blue w3-gradient w3-container" id="Articles">
+    <h3 class="w3-border-bottom w3-border-black w3-padding-16">Articles</h3>
 
     <!--Post-->
-    <div class="post-item w3-row-padding w3-margin-top w3-center w3-content">
-      <div class="w3-col m4 w3-padding-16">
-        <div class="w3-card-4">
-          <div class="crop">
-            <img src="images/iphone1.jpg" alt="iphone" class="w3-hover-opacity" />
+    <div class="w3-card w3-black">
+      <div class="post-item w3-row-padding w3-margin-top w3-center w3-content">
+        <div class="w3-col m4 w3-padding-16">
+          <div class="w3-card-4">
+            <div class="crop">
+              <img src="images/iphone1.jpg" alt="iphone" class="w3-hover-opacity" />
+            </div>
+            <footer class="w3-container w3-center">
+              <p>Review Iphone X</p>
+            </footer>
           </div>
-          <footer class="w3-container w3-center">
-            <p>Review Iphone X</p>
-          </footer>
         </div>
-      </div>
 
-      <div class="w3-col m4 w3-padding-16">
-        <div class="w3-card-4">
-          <div class="crop">
-            <img src="images/oneplus.jpg" alt="iphone" class="w3-hover-opacity" />
+        <div class="w3-col m4 w3-padding-16">
+          <div class="w3-card-4">
+            <div class="crop">
+              <img src="images/oneplus.jpg" alt="iphone" class="w3-hover-opacity" />
+            </div>
+            <footer class="w3-container w3-center">
+              <p>Review Iphone X</p>
+            </footer>
           </div>
-          <footer class="w3-container w3-center">
-            <p>Review Iphone X</p>
-          </footer>
         </div>
-      </div>
 
-      <div class="w3-col m4 w3-padding-16">
-        <div class="w3-card-4 w3-white">
-          <div class="crop">
-            <img src="images/iphone.jpg" alt="iphone" class="w3-hover-opacity" />
+        <div class="w3-col m4 w3-padding-16">
+          <div class="w3-card-4 w3-white">
+            <div class="crop">
+              <img src="images/iphone.jpg" alt="iphone" class="w3-hover-opacity" />
+            </div>
+            <footer class="w3-container w3-center w3-blue">
+              <p>Review Iphone X</p>
+            </footer>
           </div>
-          <footer class="w3-container w3-center w3-blue">
-            <p>Review Iphone X</p>
-          </footer>
         </div>
       </div>
     </div>
-
   </div>
   <!--script-->
   <script>
