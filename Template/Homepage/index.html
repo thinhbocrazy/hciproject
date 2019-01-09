@@ -25,16 +25,16 @@
 </head>
 
 <body>
-  <div class="w3-top">
+  <div id="navlarge"class="w3-top">
     <!-- Navbar -->
-    <div class="w3-bar w3-black">
+    <div class="w3-bar w3-text-white" style="background-color: #4F1DCF">
       <a href="#" class="w3-bar-item w3-button w3-hide-small">Home</a>
       <a href="#Explore" class="w3-bar-item w3-button w3-hide-small" onclick="myFunction()">Explore</a>
       <a href="#Articles" class="w3-bar-item w3-button w3-hide-small" onclick="myFunction()">Articles</a>
       <a href="#" class="w3-bar-item w3-button w3-hide-small">About</a>
     </div>
 
-    <div id="navsmall" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium">
+    <div id="navsmall" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium w3-text-white">
       <a href="#" class="w3-bar-item w3-button">Home</a>
       <a href="#Articles" class="w3-bar-item w3-button" onclick="myFunction()">Articles</a>
       <a href="#" class="w3-bar-item w3-button" onclick="myFunction()">About</a>
@@ -75,7 +75,7 @@
   </header>
   <!-- The Explorer Section -->
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="Explore">
-    <h1 style="color:white">Explore</h1>
+    <h2 style="color:white">Explore</h2>
     <div class="w3-row-padding w3-section" style="display: inline">
 
       <div class="w3-col" style="width:40px">
@@ -86,45 +86,45 @@
       <div class="w3-rest"><input type="text" class="w3-input" placeholder="Search ..." /></div>
     </div>
 
-    <div class="bubbleChart"></div>
+    <div class="bubbleChart"></div> 
   </div>
   <!-- Articles Section -->
-  <div class="w3-blue w3-gradient w3-container" id="Articles">
-    <h3 class="w3-border-bottom w3-border-black w3-padding-16">Articles</h3>
+  <div class="w3-gradient w3-container w3-black w3-content"  id="Articles">
+    <h2 class="w3-border-bottom w3-border-white w3-center">Articles</h2>
 
     <!--Post-->
-    <div class="w3-card w3-black">
+    <div class="w3-card">
       <div class="post-item w3-row-padding w3-margin-top w3-center w3-content">
         <div class="w3-col m4 w3-padding-16">
-          <div class="w3-card-4">
+          <div class="w3-card-4 w3-black">
             <div class="crop">
               <img src="images/iphone1.jpg" alt="iphone" class="w3-hover-opacity" />
             </div>
-            <footer class="w3-container w3-center">
+            <footer class="w3-container w3-center" style="background-color: #4F1DCF">
               <p>Review Iphone X</p>
             </footer>
           </div>
         </div>
 
         <div class="w3-col m4 w3-padding-16">
-          <div class="w3-card-4">
+          <div class="w3-card-4 w3-black">
             <div class="crop">
               <img src="images/oneplus.jpg" alt="iphone" class="w3-hover-opacity" />
             </div>
-            <footer class="w3-container w3-center">
+            <footer class="w3-container w3-center" style="background-color: #4F1DCF">
               <p>Review Iphone X</p>
             </footer>
           </div>
         </div>
 
         <div class="w3-col m4 w3-padding-16">
-          <div class="w3-card-4 w3-white">
+          <div class="w3-card-4 w3-black">
             <div class="crop">
               <a href="../Reviewpage/main.html">
               		<img src="images/iphone.jpg" alt="iphone" class="w3-hover-opacity" />
               	</a>
             </div>
-            <footer class="w3-container w3-center w3-blue">
+            <footer class="w3-container w3-center" style="background-color: #4F1DCF">
               <p>Review Iphone Xs</p>
             </footer>
           </div>
