@@ -104,4 +104,12 @@ body {
 .post-container:hover .image {
     opacity: 0.3;
 }
+ .name{
+	margin-left:50px;
+	font-size:14px;
+}
+.intro{
+	margin-top:90px;
+	background:red;
+}
 
