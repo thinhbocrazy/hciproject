@@ -1,7 +1,3 @@
-
-
-body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
-
 #name{
 	color: #000;	
 	text-align: left;
@@ -9,8 +5,8 @@ body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
 	font-size: 36px;
 	}
 #phone {
-	margin-top: 50px;
-	margin-left: 0px;
+	margin-top: 20px;
+	margin-left:0px;
 }
 #title {
 	margin-top: 10px;
@@ -46,36 +42,55 @@ body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
 }
 
 .container{
-	margin-top:70px;}
+	margin-top:90px;}
 .myButton1{
 	position:absolute;
+	top:650px;
 	right:500px;
 	
 }
 .myButton2{
 	
 	position:absolute;
+	top:650px;
 	right:400px;
 	
 }
-.w3-bar{
-	background:#06F;
+.w3-top{
+	background:#4F1DCF;
 	color:white;
 }
 
 .heart {
   width: 100px;
   height: 100px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
   transform: translate(-50%, -50%);
   background: url(images/heart.png) no-repeat;  
   cursor: pointer;
-  
+  position:absolute;
+  top:670px;
+  left:500px;
 }
 .heart-blast {
   background-position: -2800px 0;
   transition: background 1s steps(28);
 }
-
+#slogan{
+	font-size: 18px;
+	font-weight: bold;
+	font-style: italic;
+	
+}
+#price{
+	font-size: 12px;
+	margin-left: 20px;
+	font-style: italic;
+}
+.name{
+	margin-left:50px;
+	font-size:14px;
+}
+.intro{
+	margin-top:90px;
+	background:red;
+}
