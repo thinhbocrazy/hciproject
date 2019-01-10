@@ -59,39 +59,67 @@
   </head>
 
   <body>
-    <div id="navlarge" class="w3-top">
-      <!-- Navbar -->
-      <div class="w3-bar w3-text-white" style="background-color: #4F1DCF">
-        <a href="#" class="w3-bar-item w3-button w3-hide-small">Home</a>
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div
+        class="w3-bar w3-card w3-text-white"
+        style="background-color: #4F1DCF;"
+        id="navlarge"
+      >
+        <a
+          class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+          href="javascript:void(0)"
+          onclick="myFunction()"
+          title="Toggle Navigation Menu"
+          ><i class="fa fa-bars"></i
+        ></a>
+       
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Home</a>
+        
         <a
           href="#Explore"
-          class="w3-bar-item w3-button w3-hide-small"
-          onclick="myFunction()"
+          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
           >Explore</a
         >
         <a
           href="#Articles"
-          class="w3-bar-item w3-button w3-hide-small"
-          onclick="myFunction()"
+          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
           >Articles</a
         >
-        <a href="#" class="w3-bar-item w3-button w3-hide-small">About</a>
-      </div>
-
-      <div
-        id="navsmall"
-        class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium w3-text-white"
-      >
-        <a href="#" class="w3-bar-item w3-button">Home</a>
-        <a href="#Articles" class="w3-bar-item w3-button" onclick="myFunction()"
-          >Articles</a
-        >
-        <a href="#" class="w3-bar-item w3-button" onclick="myFunction()"
+        <a
+          href="#About"
+          class="w3-bar-item w3-button w3-padding-large w3-hide-small"
           >About</a
         >
-        <a href="#" class="w3-bar-item w3-button">Link 3</a>
       </div>
     </div>
+
+    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+    <div
+      id="navDemo"
+      class="w3-text-white w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-bottom"
+      style="margin-top:46px"
+    >
+      <a
+        href="#Explore"
+        class="w3-bar-item w3-button w3-padding-large"
+        onclick="myFunction()"
+        >Explore</a
+      >
+      <a
+        href="#Articles"
+        class="w3-bar-item w3-button w3-padding-large"
+        onclick="myFunction()"
+        >Articles</a
+      >
+      <a
+        href="#About"
+        class="w3-bar-item w3-button w3-padding-large"
+        onclick="myFunction()"
+        >About</a
+      >
+    </div>
+
     <!-- Page content -->
     <!-- Automatic Slideshow Images -->
     <header class="w3-display-container">
@@ -156,12 +184,16 @@
           <div class="w3-col m4 w3-padding-16">
             <div class="w3-card-4 w3-black post-container">
               <div class="crop">
+<<<<<<< HEAD
+                <img src="images/iphone1.jpg" alt="iphone" class="image" />
+=======
 			  <a href="../Reviewpage/iPhone Xs/index.html">
                 <img
                   src="images/iphone1.jpg"
                   alt="iphone"
                   class="image"
                 />
+>>>>>>> 8dd81cd603f0d31eec57eb3ed2fa2f881e64697c
                 <div class="middle">
                   <i class="fa fa-eye" style="font-size:36px"></i>
                 </div>
@@ -179,11 +211,7 @@
           <div class="w3-col m4 w3-padding-16">
             <div class="w3-card-4 w3-black post-container">
               <div class="crop">
-                <img
-                  src="images/op6t.jpg"
-                  alt="iphone"
-                  class="image"
-                />
+                <img src="images/op6t.jpg" alt="iphone" class="image" />
                 <div class="middle">
                   <i class="fa fa-eye" style="font-size:36px"></i>
                 </div>
@@ -201,11 +229,7 @@
             <div class="w3-card-4 w3-black post-container">
               <div class="crop">
                 <a href="../Reviewpage/main.html">
-                  <img
-                    src="images/mix3.jpg"
-                    alt="iphone"
-                    class="image"
-                  />
+                  <img src="images/mix3.jpg" alt="iphone" class="image" />
                   <div class="middle">
                     <i class="fa fa-eye" style="font-size:36px"></i>
                   </div>
@@ -225,15 +249,28 @@
     <!--script-->
     <script>
       //navigator
+      // Used to toggle the menu on small screens when clicking on the menu button
       function myFunction() {
-        var x = document.getElementById("navsmall");
+        var x = document.getElementById("navDemo");
         if (x.className.indexOf("w3-show") == -1) {
           x.className += " w3-show";
         } else {
           x.className = x.className.replace(" w3-show", "");
         }
       }
-      //
+
+      function myNav(x) {
+        var x = document.getElementById("navlarge");
+        if (x.className.indexOf("w3-bottom") == -1) {
+          x.className += " w3-bottom w3-text-white";
+        } else {
+          x.className = x.className.replace(" w3-bottom", "w3-top w3-text-white");
+        }
+      }
+
+      var x = window.matchMedia("(max-width:35em)");
+      myNav(x); // Call listener function at run time
+      x.addListener(myNav); // Attach listener function on state changes
       // Automatic Slideshow - change image every 4 seconds
       var myIndex = 0;
       carousel();

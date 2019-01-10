@@ -69,7 +69,7 @@ body {
     color: white;
 }
 
-#navlarge #navsmall {
+#navlarge #navDemo {
     color: white;
 }
 .middle{
@@ -103,4 +103,5 @@ body {
 
 .post-container:hover .image {
     opacity: 0.3;
-  }
+}
+
