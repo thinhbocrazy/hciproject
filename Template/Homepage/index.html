@@ -260,11 +260,11 @@
       }
 
       function myNav(x) {
-        var x = document.getElementById("navlarge");
-        if (x.className.indexOf("w3-bottom") == -1) {
-          x.className += " w3-bottom w3-text-white";
+        var y = document.getElementById("navlarge");
+        if (x.matches && y.className.indexOf("w3-bottom") == -1) {
+          y.className += " w3-bottom w3-text-white";
         } else {
-          x.className = x.className.replace(" w3-bottom", "w3-top w3-text-white");
+          y.className = y.className.replace(" w3-bottom", "w3-top w3-text-white");
         }
       }
 
