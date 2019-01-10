@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html>
+
 <title>Forum Page</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,800" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="style.css">
 <style>
   body,h1,h2,h3,h4,h5 {font-family: "OpenSan", sans-serif}
+  .w3-bar{
+	background:#4F1DCF;
+	color:white;	
+  }
 </style>
+
+<script src="js/jquery-3.3.1.slim.min.js"></script> 
+<script src="js/popper.min.js" ></script> 
+<script src="js/bootstrap.min.js" ></script>
 
 <body class="w3-light-grey">
 
-  <!-- w3-content defines a container for fixed size centered content, 
+
+<div class="w3-top ">
+  <div class="w3-bar w3-card  "> <a class="w3-bar-item w3-button w3-padding-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"></a>   
+    <a href="..\Homepage\index.html" class="w3-bar-item w3-button w3-left w3-hide-small  ">HOME</a> 
+  </div>
+</div>
+
+
+
+
+<!-- w3-content defines a container for fixed size centered content, 
 and is wrapped around the whole page content, except for the footer in this example -->
-  <div class="w3-content" style="max-width:1200px">
+  <div class="w3-content w3-margin-top" style="max-width:1200px">
 
     <!-- Header -->
     <header class="w3-container w3-center w3-padding-32">
       <p>Show us your opinions about</p>
-      <h1><b>iphone Xs</b></h1>
+      <h1><b>iPhone Xs</b></h1>
     </header>
 
     <!-- Grid -->
@@ -183,13 +204,13 @@ and is wrapped around the whole page content, except for the footer in this exam
             <h4>Tags</h4>
           </div>
           <div class="w3-container w3-white">
-            <p><span class="w3-tag w3-black w3-margin-bottom">iphone Xs</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">iphone</span>
+            <p><span class="w3-tag w3-black w3-margin-bottom">iPhone Xs</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">iphone</span>
               <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Apple</span>
-              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">iphone
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">iPhone
                 X</span>
               <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Apple
-                iphone</span>
-              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">iphone
+                iPhone</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">iPhone
                 Xs Max</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Shopping</span>
               <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Games</span>
             </p>
@@ -204,12 +225,26 @@ and is wrapped around the whole page content, except for the footer in this exam
 
     <!-- END w3-content -->
   </div>
-
-  <!-- Footer -->
-  <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
-    <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
-    <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
-  </footer>
+  
+<div>
+<button class="w3-button w3-circle w3-black" id="More">+</button>
+</div>
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  <div class="row">
+    <div class="col">
+   		<img  src="images/logo@2x.png" width="428" height="88"> 
+ 	</div>
+    <div class="col" >
+   		<h1> Group 7 </h1>
+        <div class="name">
+            <p> Nguyễn Minh Trí </p>
+            <p> Hứa Hưng Thịnh </p>
+            <p> Bùi Thị Mỹ Tiên </p>
+        </div>
+ 	</div>
+   </div>
+</footer>
   <script>
     function openForm() {
       document.getElementById("myForm").style.display = "block";
