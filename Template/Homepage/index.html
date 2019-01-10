@@ -1,182 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
+      type="application/javascript"
+    ></script>
+    <script
+      src="https://phuonghuynh.github.io/js/bower_components/d3/d3.min.js"
+      type="application/javascript"
+    ></script>
+    <script
+      src="https://phuonghuynh.github.io/js/bower_components/d3-transform/src/d3-transform.js"
+      type="application/javascript"
+    ></script>
+    <script
+      src="https://phuonghuynh.github.io/js/bower_components/cafej/src/extarray.js"
+      type="application/javascript"
+    ></script>
+    <script
+      src="https://phuonghuynh.github.io/js/bower_components/cafej/src/misc.js"
+      type="application/javascript"
+    ></script>
+    <script
+      src="https://phuonghuynh.github.io/js/bower_components/cafej/src/micro-observer.js"
+      type="application/javascript"
+    ></script>
+    <script
+      src="https://phuonghuynh.github.io/js/bower_components/microplugin/src/microplugin.js"
+      type="application/javascript"
+    ></script>
+    <script
+      src="https://phuonghuynh.github.io/js/bower_components/bubble-chart/src/bubble-chart.js"
+      type="application/javascript"
+    ></script>
+    <script
+      src="https://phuonghuynh.github.io/js/bower_components/bubble-chart/src/plugins/central-click/central-click.js"
+      type="application/javascript"
+    ></script>
+    <script
+      src="https://phuonghuynh.github.io/js/bower_components/bubble-chart/src/plugins/lines/lines.js"
+      type="application/javascript"
+    ></script>
+    <script src="script.js"></script>
+    <title>Mobile Gure</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="application/javascript"></script>
-  <script src="https://phuonghuynh.github.io/js/bower_components/d3/d3.min.js" type="application/javascript"></script>
-  <script src="https://phuonghuynh.github.io/js/bower_components/d3-transform/src/d3-transform.js" type="application/javascript"></script>
-  <script src="https://phuonghuynh.github.io/js/bower_components/cafej/src/extarray.js" type="application/javascript"></script>
-  <script src="https://phuonghuynh.github.io/js/bower_components/cafej/src/misc.js" type="application/javascript"></script>
-  <script src="https://phuonghuynh.github.io/js/bower_components/cafej/src/micro-observer.js" type="application/javascript"></script>
-  <script src="https://phuonghuynh.github.io/js/bower_components/microplugin/src/microplugin.js" type="application/javascript"></script>
-  <script src="https://phuonghuynh.github.io/js/bower_components/bubble-chart/src/bubble-chart.js" type="application/javascript"></script>
-  <script src="https://phuonghuynh.github.io/js/bower_components/bubble-chart/src/plugins/central-click/central-click.js"
-    type="application/javascript"></script>
-  <script src="https://phuonghuynh.github.io/js/bower_components/bubble-chart/src/plugins/lines/lines.js" type="application/javascript"></script>
-  <script src="script.js"></script>
-  <title>Mobile Gure</title>
-</head>
+  <body>
+    <div id="navlarge" class="w3-top">
+      <!-- Navbar -->
+      <div class="w3-bar w3-text-white" style="background-color: #4F1DCF">
+        <a href="#" class="w3-bar-item w3-button w3-hide-small">Home</a>
+        <a
+          href="#Explore"
+          class="w3-bar-item w3-button w3-hide-small"
+          onclick="myFunction()"
+          >Explore</a
+        >
+        <a
+          href="#Articles"
+          class="w3-bar-item w3-button w3-hide-small"
+          onclick="myFunction()"
+          >Articles</a
+        >
+        <a href="#" class="w3-bar-item w3-button w3-hide-small">About</a>
+      </div>
 
-<body>
-  <div id="navlarge"class="w3-top">
-    <!-- Navbar -->
-    <div class="w3-bar w3-text-white" style="background-color: #4F1DCF">
-      <a href="#" class="w3-bar-item w3-button w3-hide-small">Home</a>
-      <a href="#Explore" class="w3-bar-item w3-button w3-hide-small" onclick="myFunction()">Explore</a>
-      <a href="#Articles" class="w3-bar-item w3-button w3-hide-small" onclick="myFunction()">Articles</a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small">About</a>
-    </div>
-
-    <div id="navsmall" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium w3-text-white">
-      <a href="#" class="w3-bar-item w3-button">Home</a>
-      <a href="#Articles" class="w3-bar-item w3-button" onclick="myFunction()">Articles</a>
-      <a href="#" class="w3-bar-item w3-button" onclick="myFunction()">About</a>
-      <a href="#" class="w3-bar-item w3-button">Link 3</a>
-    </div>
-  </div>
-  <!-- Page content -->
-  <!-- Automatic Slideshow Images -->
-  <header class="w3-display-container">
-    <div class="mySlides w3-display-container w3-center">
-      <img src="images/handle-world.jpg" />
-      <div class="center">
-        <h3>Review Luôn</h3>
-        <p><b>Let's have some fun in learning smartphones and techs.</b></p>
+      <div
+        id="navsmall"
+        class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium w3-text-white"
+      >
+        <a href="#" class="w3-bar-item w3-button">Home</a>
+        <a href="#Articles" class="w3-bar-item w3-button" onclick="myFunction()"
+          >Articles</a
+        >
+        <a href="#" class="w3-bar-item w3-button" onclick="myFunction()"
+          >About</a
+        >
+        <a href="#" class="w3-bar-item w3-button">Link 3</a>
       </div>
     </div>
-    <div class="mySlides w3-display-container w3-center">
-      <img src="images/phone.jpg" style="object-position:50% 20%" />
-      <div class="right">
-        <h3>Free</h3>
-        <p><b>Information about newest and smartphones.</b></p>
-      </div>
-    </div>
-    <div class="mySlides w3-display-container w3-center">
-      <img src="images/satisfied.jpg" style="object-position:50% 0%" />
-      <div class="center">
-        <h3>Trustable</h3>
-        <p><b>facts and real is the most important thing.</b></p>
-      </div>
-    </div>
-    <div class="mySlides w3-display-container w3-center">
-      <img src="images/share-love.jpg" style="object-position:50% 20%" />
-      <div class="center">
-        <h3>Feelings</h3>
-        <p><b>Hope you will have a great time being here.</b></p>
-      </div>
-    </div>
-  </header>
-  <!-- The Explorer Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="Explore">
-    <h2 style="color:white">Explore</h2>
-    <div class="w3-row-padding w3-section" style="display: inline">
-
-      <div class="w3-col" style="width:40px">
-        <a href="javascript:void(0)" class="w3-hover-blue">
-          <i class="fa fa-search w3-xlarge w3-text-white"></i>
-        </a>
-      </div>
-      <div class="w3-rest"><input type="text" class="w3-input" placeholder="Search ..." /></div>
-    </div>
-
-    <div class="bubbleChart"></div> 
-  </div>
-  <!-- Articles Section -->
-  <div class="w3-gradient w3-container w3-black w3-content"  id="Articles">
-    <h2 class="w3-border-bottom w3-border-white w3-center">Articles</h2>
-
-    <!--Post-->
-    <div class="w3-card">
-      <div class="post-item w3-row-padding w3-margin-top w3-center w3-content">
-        <div class="w3-col m4 w3-padding-16">
-          <div class="w3-card-4 w3-black">
-            <div class="crop">
-              <img src="images/iphone1.jpg" alt="iphone" class="w3-hover-opacity" />
-            </div>
-<<<<<<< HEAD
-            <footer class="w3-container w3-center" style="background-color: #4F1DCF">
-              <p>Review Iphone X</p>
-=======
-            <footer class="w3-container w3-center">
-              <p>Iphone Xs</p>
->>>>>>> 0de7109c71f543cfa414578f4a962bd1817162ea
-            </footer>
-          </div>
-        </div>
-
-        <div class="w3-col m4 w3-padding-16">
-          <div class="w3-card-4 w3-black">
-            <div class="crop">
-              <img src="images/op6t.jpg" alt="iphone" class="w3-hover-opacity" />
-            </div>
-<<<<<<< HEAD
-            <footer class="w3-container w3-center" style="background-color: #4F1DCF">
-              <p>Review Iphone X</p>
-=======
-            <footer class="w3-container w3-center">
-              <p>Oneplus 6T</p>
->>>>>>> 0de7109c71f543cfa414578f4a962bd1817162ea
-            </footer>
-          </div>
-        </div>
-
-        <div class="w3-col m4 w3-padding-16">
-          <div class="w3-card-4 w3-black">
-            <div class="crop">
-              <a href="../Reviewpage/main.html">
-              		<img src="images/mix3.jpg" alt="iphone" class="w3-hover-opacity" />
-              	</a>
-            </div>
-<<<<<<< HEAD
-            <footer class="w3-container w3-center" style="background-color: #4F1DCF">
-              <p>Review Iphone Xs</p>
-=======
-            <footer class="w3-container w3-center w3-blue">
-              <p>Mi Mix 3</p>
->>>>>>> 0de7109c71f543cfa414578f4a962bd1817162ea
-            </footer>
-          </div>
+    <!-- Page content -->
+    <!-- Automatic Slideshow Images -->
+    <header class="w3-display-container">
+      <div class="mySlides w3-display-container w3-center">
+        <img src="images/handle-world.jpg" />
+        <div class="center">
+          <h3>Review Luôn</h3>
+          <p><b>Let's have some fun in learning smartphones and techs.</b></p>
         </div>
       </div>
+      <div class="mySlides w3-display-container w3-center">
+        <img src="images/phone.jpg" style="object-position:50% 20%" />
+        <div class="right">
+          <h3>Free</h3>
+          <p><b>Information about newest and smartphones.</b></p>
+        </div>
+      </div>
+      <div class="mySlides w3-display-container w3-center">
+        <img src="images/satisfied.jpg" style="object-position:50% 0%" />
+        <div class="center">
+          <h3>Trustable</h3>
+          <p><b>facts and real is the most important thing.</b></p>
+        </div>
+      </div>
+      <div class="mySlides w3-display-container w3-center">
+        <img src="images/share-love.jpg" style="object-position:50% 20%" />
+        <div class="center">
+          <h3>Feelings</h3>
+          <p><b>Hope you will have a great time being here.</b></p>
+        </div>
+      </div>
+    </header>
+    <!-- The Explorer Section -->
+    <div
+      class="w3-container w3-content w3-center w3-padding-64"
+      style="max-width:800px"
+      id="Explore"
+    >
+      <h2 style="color:white">Explore</h2>
+      <div class="w3-row-padding w3-section" style="display: inline">
+        <div class="w3-col" style="width:40px">
+          <a href="javascript:void(0)" class="w3-hover-blue">
+            <i class="fa fa-search w3-xlarge w3-text-white"></i>
+          </a>
+        </div>
+        <div class="w3-rest">
+          <input type="text" class="w3-input" placeholder="Search ..." />
+        </div>
+      </div>
+
+      <div class="bubbleChart"></div>
     </div>
-  </div>
-  <!--script-->
-  <script>
-    //navigator
-    function myFunction() {
-      var x = document.getElementById("navsmall");
-      if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-      } else {
-        x.className = x.className.replace(" w3-show", "");
-      }
-    }
-    //
-    // Automatic Slideshow - change image every 4 seconds
-    var myIndex = 0;
-    carousel();
+    <!-- Articles Section -->
+    <div class="w3-gradient w3-container w3-black w3-content" id="Articles">
+      <h2 class="w3-border-bottom w3-border-white w3-center">Articles</h2>
 
-    function carousel() {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-      myIndex++;
-      if (myIndex > x.length) {
-        myIndex = 1;
-      }
-      x[myIndex - 1].style.display = "block";
-      setTimeout(carousel, 2000);
-    }
-  </script>
-</body>
+      <!--Post-->
+      <div class="w3-card">
+        <div
+          class="post-item w3-row-padding w3-margin-top w3-center w3-content"
+        >
+          <div class="w3-col m4 w3-padding-16">
+            <div class="w3-card-4 w3-black post-container">
+              <div class="crop">
+                <img
+                  src="images/iphone1.jpg"
+                  alt="iphone"
+                  class="image"
+                />
+                <div class="middle">
+                  <i class="fa fa-eye" style="font-size:36px"></i>
+                </div>
+              </div>
+              <footer
+                class="w3-container w3-center"
+                style="background-color: #4F1DCF"
+              >
+                <p>Iphone Xs</p>
+              </footer>
+            </div>
+          </div>
 
+          <div class="w3-col m4 w3-padding-16">
+            <div class="w3-card-4 w3-black post-container">
+              <div class="crop">
+                <img
+                  src="images/op6t.jpg"
+                  alt="iphone"
+                  class="image"
+                />
+                <div class="middle">
+                  <i class="fa fa-eye" style="font-size:36px"></i>
+                </div>
+              </div>
+              <footer
+                class="w3-container w3-center"
+                style="background-color: #4F1DCF"
+              >
+                <p>Oneplus 6T</p>
+              </footer>
+            </div>
+          </div>
+
+          <div class="w3-col m4 w3-padding-16">
+            <div class="w3-card-4 w3-black post-container">
+              <div class="crop">
+                <a href="../Reviewpage/main.html">
+                  <img
+                    src="images/mix3.jpg"
+                    alt="iphone"
+                    class="image"
+                  />
+                  <div class="middle">
+                    <i class="fa fa-eye" style="font-size:36px"></i>
+                  </div>
+                </a>
+              </div>
+              <footer
+                class="w3-container w3-center"
+                style="background-color: #4F1DCF"
+              >
+                <p>Mi Mix 3</p>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--script-->
+    <script>
+      //navigator
+      function myFunction() {
+        var x = document.getElementById("navsmall");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+      //
+      // Automatic Slideshow - change image every 4 seconds
+      var myIndex = 0;
+      carousel();
+
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+          myIndex = 1;
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 2000);
+      }
+    </script>
+  </body>
 </html>
