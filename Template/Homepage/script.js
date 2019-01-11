@@ -40,7 +40,7 @@ $(document).ready(function () {
               },
               attr: {dy: "50px"},
               centralClick: function() {
-                onclick=document.getElementById('id01').style.display='block';
+                
               }
             }
           },
