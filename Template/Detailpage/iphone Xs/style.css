@@ -1,0 +1,141 @@
+#black-top {
+    background-color: black;
+}
+
+#title{
+    color:white;
+}
+
+.bg-container {
+    
+}
+
+#container-overview{
+    width:100%;
+    margin-left: 370px;
+}
+
+#specs-info{
+    margin-top: -200px;
+    margin-left: 1000px;
+}
+
+.specs-phone{
+    color: black;
+}
+
+.detail-specs
+{
+    margin-top:150px;
+    font-size: 10px;
+    margin-left:400px;
+}
+
+.detail-specs2
+{
+    margin-top:150px;
+    font-size: 10px;
+}
+
+.detail-specs3
+{
+    margin-top:300px;
+    font-size: 10px;
+}
+
+
+
+
+.detail-title{
+    margin-left: 470px;
+    margin-top:-30px;
+    
+}
+
+.detail-item-1{
+    margin-top: 50px;
+    font-size: 10px;
+}
+
+.detail-item-1-2{
+    margin-top: 50px;
+    font-size: 10px;
+    margin-left:350px;
+}
+.detail-item-2{
+    margin-left: 700px;
+    margin-top: -695px;
+}
+.detail-item-2-3{
+    margin-left: 700px;
+    margin-top: -840px;
+}
+
+.detail-item-2-4{
+    margin-left: 700px;
+    margin-top: -420px;
+}
+
+.detail-item-2-5{
+    margin-left: 700px;
+    margin-top: -220px;
+}
+
+.detail-item-2-6{
+    margin-left: 700px;
+    margin-top: -270px;
+}
+
+#param-text{
+    font-size: 17px;
+}
+
+p{
+    font-size: 17px;
+}
+
+@media screen and (max-width: 1000px){
+    .detail-specs {
+        margin-left:-400px;
+    }
+
+
+    .detail-item-1{
+        margin-top: 50px;
+        margin-left:410px;
+        font-size: 10px;
+    }
+
+    .detail-item-2{
+        margin-left: 700px;
+        margin-top: -695px;
+    }
+    
+    .detail-item-2-3
+    {
+        margin-top: -830px;
+        margin-left: 720px;
+    }
+
+    .detail-item-2-4{
+        margin-left: 700px;
+        margin-top: -405px;
+    }
+    
+    .detail-item-2-5{
+        margin-left: 700px;
+        margin-top: -200px;
+    }
+    
+
+    #container-overview{
+        margin-left:0px;
+        scale:1;
+    }
+
+    .detail-item-1-2{
+        margin-top: 50px;
+        font-size: 10px;
+        margin-left:420px;
+    }
+}
