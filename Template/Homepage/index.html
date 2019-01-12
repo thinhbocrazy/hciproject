@@ -46,12 +46,16 @@
       src="https://phuonghuynh.github.io/js/bower_components/bubble-chart/src/bubble-chart.js"
       type="application/javascript"
     ></script>
+<<<<<<< HEAD
+=======
     
+>>>>>>> 6fba0a0b18626f6f354f3c00ff5de37f01d3e134
     <script
       src="https://phuonghuynh.github.io/js/bower_components/bubble-chart/src/plugins/lines/lines.js"
       type="application/javascript"
     ></script>
     <script src="script.js"></script>
+    <script src="centralClick.js"></script>
     <title>Mobile Gure</title>
   </head>
 
@@ -70,9 +74,9 @@
           title="Toggle Navigation Menu"
           ><i class="fa fa-bars"></i
         ></a>
-       
+
         <a href="#" class="w3-bar-item w3-button w3-padding-large">Home</a>
-        
+
         <a
           href="#Explore"
           class="w3-bar-item w3-button w3-padding-large w3-hide-small"
@@ -119,17 +123,17 @@
 
     <!-- Page content -->
     <!-- Automatic Slideshow Images -->
-    <header class="w3-display-container">
+    <header class="w3-display-container" id="myHeader">
       <div class="mySlides w3-display-container w3-center">
         <img src="images/handle-world.jpg" />
         <div class="center">
-          <h3>Review Luôn</h3>
+          <h1>Review Luôn</h1>
           <p><b>Let's have some fun in learning smartphones and techs.</b></p>
         </div>
       </div>
       <div class="mySlides w3-display-container w3-center">
         <img src="images/phone.jpg" style="object-position:50% 20%" />
-        <div class="right">
+        <div class="center" style="color:black;">
           <h3>Free</h3>
           <p><b>Information about newest and smartphones.</b></p>
         </div>
@@ -168,6 +172,72 @@
       </div>
 
       <div class="bubbleChart"></div>
+
+      <div id="id01" class="w3-modal">
+          <div class="w3-modal-content">
+            <div class="w3-container">
+              <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+              <!-- Product grid -->
+        <div class="w3-row w3-grayscale">
+          <div class="w3-col l3 s6">
+            <div class="w3-container">
+              <img src="/w3images/jeans1.jpg" style="width:100%">
+              <p>Ripped Skinny Jeans<br><b>$24.99</b></p>
+            </div>
+            <div class="w3-container">
+              <img src="/w3images/jeans2.jpg" style="width:100%">
+              <p>Mega Ripped Jeans<br><b>$19.99</b></p>
+            </div>
+          </div>
+      
+          <div class="w3-col l3 s6">
+            <div class="w3-container">
+              <div class="w3-display-container">
+                <img src="/w3images/jeans2.jpg" style="width:100%">
+                <span class="w3-tag w3-display-topleft">New</span>
+                <div class="w3-display-middle w3-display-hover">
+                  <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+                </div>
+              </div>
+              <p>Mega Ripped Jeans<br><b>$19.99</b></p>
+            </div>
+            <div class="w3-container">
+              <img src="/w3images/jeans3.jpg" style="width:100%">
+              <p>Washed Skinny Jeans<br><b>$20.50</b></p>
+            </div>
+          </div>
+      
+          <div class="w3-col l3 s6">
+            <div class="w3-container">
+              <img src="/w3images/jeans3.jpg" style="width:100%">
+              <p>Washed Skinny Jeans<br><b>$20.50</b></p>
+            </div>
+            <div class="w3-container">
+              <div class="w3-display-container">
+                <img src="/w3images/jeans4.jpg" style="width:100%">
+                <span class="w3-tag w3-display-topleft">Sale</span>
+                <div class="w3-display-middle w3-display-hover">
+                  <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+                </div>
+              </div>
+              <p>Vintage Skinny Jeans<br><b class="w3-text-red">$14.99</b></p>
+            </div>
+          </div>
+      
+          <div class="w3-col l3 s6">
+            <div class="w3-container">
+              <img src="/w3images/jeans4.jpg" style="width:100%">
+              <p>Vintage Skinny Jeans<br><b>$14.99</b></p>
+            </div>
+            <div class="w3-container">
+              <img src="/w3images/jeans1.jpg" style="width:100%">
+              <p>Ripped Skinny Jeans<br><b>$24.99</b></p>
+            </div>
+          </div>
+        </div>
+            </div>
+          </div>
+        </div>
     </div>
     <!-- Articles Section -->
     <div class="w3-gradient w3-container w3-black w3-content" id="Articles">
@@ -181,20 +251,12 @@
           <div class="w3-col m4 w3-padding-16">
             <div class="w3-card-4 w3-black post-container">
               <div class="crop">
-<<<<<<< HEAD
-                <img src="images/iphone1.jpg" alt="iphone" class="image" />
-=======
-			  <a href="../Reviewpage/iPhone Xs/index.html">
-                <img
-                  src="images/iphone1.jpg"
-                  alt="iphone"
-                  class="image"
-                />
->>>>>>> 8dd81cd603f0d31eec57eb3ed2fa2f881e64697c
-                <div class="middle">
-                  <i class="fa fa-eye" style="font-size:36px"></i>
-                </div>
-			  </a>
+                <a href="../Reviewpage/iPhone Xs/index.html">
+                  <img src="images/iphone1.jpg" alt="iphone" class="image" />
+                  <div class="middle">
+                    <i class="fa fa-eye" style="font-size:36px"></i>
+                  </div>
+                </a>
               </div>
               <footer
                 class="w3-container w3-center"
@@ -243,6 +305,69 @@
         </div>
       </div>
     </div>
+
+    <!-- Team Container -->
+    <div class="w3-container w3-padding-64 w3-center w3-text-white" id="About">
+      <h2>OUR TEAM</h2>
+      <p>Meet the team</p>
+
+      <div class="w3-row">
+        <br />
+
+        <div class="w3-quarter">
+          <img
+            src="images/thinh.jpg"
+            alt="Boss"
+            style="width:45%"
+            class="w3-circle w3-hover-opacity"
+          />
+          <h3>Hua Hung Thinh</h3>
+          <p>Web Designer</p>
+        </div>
+
+        <div class="w3-quarter">
+          <img
+            src="images/tri.jpg"
+            alt="Boss"
+            style="width:45%"
+            class="w3-circle w3-hover-opacity"
+          />
+          <h3>Nguyen Minh Tri</h3>
+          <p>Support</p>
+        </div>
+
+        <div class="w3-quarter">
+          <img
+            src="images/tien.jpg"
+            alt="Boss"
+            style="width:45%"
+            class="w3-circle w3-hover-opacity"
+          />
+          <h3>Bui My Tien</h3>
+          <p>Boss man</p>
+        </div>
+
+        <div class="w3-quarter">
+          <img
+            src="images/khang.jpg"
+            alt="Boss"
+            style="width:45%"
+            class="w3-circle w3-hover-opacity"
+          />
+          <h3>Duong Hoang Khang</h3>
+          <p>Fixer</p>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+<footer class="w3-container w3-theme-light w3-padding-16" style="background-color:#4F1DCF;">
+   
+  <div class="w3-container w3-center">
+      <div class="content">
+          <img src="images/logo@2x.png" width="30%px" height="auto" >
+      </div>
+  </div>
+</footer>
     <!--script-->
     <script>
       //navigator
@@ -261,7 +386,10 @@
         if (x.matches && y.className.indexOf("w3-bottom") == -1) {
           y.className += " w3-bottom w3-text-white";
         } else {
-          y.className = y.className.replace(" w3-bottom", "w3-top w3-text-white");
+          y.className = y.className.replace(
+            " w3-bottom",
+            "w3-top w3-text-white"
+          );
         }
       }
 
@@ -286,21 +414,5 @@
         setTimeout(carousel, 2000);
       }
     </script>
-	
-  </body>
-  <footer class="w3-container w3-dark-grey intro w3-padding-16 ">
-      <div class="row">
-        <div class="col">
-            <img  src="images/logo@2x.png" width="428" height="88"> 
-        </div>
-        <div class="col" >
-            <h1> Group 7 </h1>
-            <div class="name">
-                <div> Nguyễn Minh Trí </div>
-                <div> Hứa Hưng Thịnh </div>
-                <div> Bùi Thị Mỹ Tiên </div>
-            </div>
-        </div>
-       </div>
-</footer>
+</body>
 </html>
